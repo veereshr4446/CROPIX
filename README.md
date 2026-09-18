@@ -28,6 +28,8 @@ Cropix lets you upload a single image, drag to select any number of regions, and
 
 ## Overview
 
+![Cropix canvas with a sprite sheet loaded](./images/screenshot-01-canvas.png)
+
 Splitting a sprite sheet into individual frames is a repetitive task. Existing tools are either bloated desktop apps, upload your images to a third-party server, or force you to crop one region at a time.
 
 **Cropix solves this.** It runs entirely in your browser, keeps your images local, and lets you:
@@ -71,7 +73,7 @@ It's designed for game developers, animators, designers, and anyone working with
 ### Experience
 - **Fully responsive** — Works on mobile, tablet, and desktop
 - **Touch support** — Pinch, drag, and resize on touchscreens
-- **Dark-mode-ready design system** — Built with CSS custom properties
+- **Design-system-driven CSS** — Custom properties, consistent radii and shadows
 - **Zero dependencies** — Except JSZip for export (loaded via CDN)
 - **100% client-side** — Images never leave your browser
 
@@ -123,6 +125,8 @@ Visit [https://veereshr4446.github.io/CROPIX/](https://veereshr4446.github.io/CR
 
 ## Usage
 
+![Cropix gallery with captured regions](./images/screenshot-02-gallery.png)
+
 1. **Upload an image** — Drag & drop, paste with `Ctrl+V`, or click to browse
 2. **Select a region** — Click and drag on the canvas
 3. **Release the mouse** — The region is saved automatically and appears in the gallery below
@@ -159,13 +163,17 @@ Visit [https://veereshr4446.github.io/CROPIX/](https://veereshr4446.github.io/CR
 
 ```
 CROPIX/
-├── index.html    # Page structure and layout
-├── style.css     # All styling including responsive breakpoints
-├── script.js     # Canvas logic, state management, export
+├── index.html                 # Page structure and layout
+├── style.css                  # All styling including responsive breakpoints
+├── script.js                  # Canvas logic, state management, export
+├── images/
+│   ├── screenshot-01-canvas.png
+│   └── screenshot-02-gallery.png
+├── LICENSE
 └── README.md
 ```
 
-Three files. No build config, no bundler, no transpiler.
+Three source files. No build config, no bundler, no transpiler.
 
 ---
 
@@ -252,5 +260,3 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
   <sub>© 2026 Viresh R. All rights reserved.</sub>
 </p>
 ```
-
----
