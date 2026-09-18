@@ -771,6 +771,18 @@ footer {
     letter-spacing: -0.005em;
 }
 
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer-line {
+    display: flex;
+    align-items: center;
+}
+
 footer .dot {
     display: inline-block;
     width: 3px;
@@ -779,6 +791,24 @@ footer .dot {
     border-radius: 50%;
     margin: 0 8px;
     vertical-align: middle;
+}
+
+.footer-credit {
+    color: var(--text-secondary);
+}
+
+.footer-credit .heart {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 13px;
+    animation: heartbeat 1.6s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.15); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.1); }
 }
 
 /* ============================================================
