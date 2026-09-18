@@ -174,8 +174,6 @@ header {
     align-items: start;
 }
 
-@media (max-width: 1080px) { .workspace { grid-template-columns: 1fr; } }
-
 /* ============================================================
    Card
    ============================================================ */
@@ -804,13 +802,6 @@ footer .dot {
     animation: heartbeat 1.6s ease-in-out infinite;
 }
 
-.footer-copyright {
-    font-size: 11.5px;
-    color: var(--text-muted);
-    opacity: 0.75;
-    margin-top: 2px;
-}
-
 @keyframes heartbeat {
     0%, 100% { transform: scale(1); }
     25% { transform: scale(1.15); }
@@ -818,17 +809,298 @@ footer .dot {
     75% { transform: scale(1.1); }
 }
 
+.footer-copyright {
+    font-size: 11.5px;
+    color: var(--text-muted);
+    opacity: 0.75;
+    margin-top: 2px;
+}
+
 /* ============================================================
-   Responsive
+   Tablet & below
    ============================================================ */
-@media (max-width: 640px) {
-    .page { padding: 20px 16px; }
-    .header-inner { padding: 0 16px; height: 56px; }
-    .brand-tag { display: none; }
-    .hero-title { font-size: 22px; }
-    .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
-    .pose-item .pose-thumb { height: 76px; }
-    .card-body { padding: 14px; }
-    .canvas-toolbar { padding: 6px 8px; }
-    .canvas-toolbar .btn { height: 26px; padding: 0 8px; font-size: 11px; }
+@media (max-width: 1080px) {
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+    .controls {
+        position: static;
+        top: auto;
+    }
+}
+
+/* ============================================================
+   Mobile
+   ============================================================ */
+@media (max-width: 768px) {
+    .page {
+        padding: 16px;
+    }
+
+    .header-inner {
+        padding: 0 14px;
+        height: 56px;
+        gap: 10px;
+    }
+
+    .brand-tag {
+        display: none;
+    }
+
+    .brand-name {
+        font-size: 14px;
+    }
+
+    .header-actions .btn {
+        height: 32px;
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    .header-actions .btn-text {
+        display: none;
+    }
+
+    .hero {
+        margin-bottom: 20px;
+    }
+
+    .hero-title {
+        font-size: 22px;
+    }
+
+    .hero-sub {
+        font-size: 13px;
+    }
+
+    .card-header {
+        padding: 12px 14px;
+    }
+
+    .card-body {
+        padding: 14px;
+    }
+
+    .upload-zone {
+        padding: 48px 20px;
+    }
+
+    .upload-icon-wrap {
+        width: 44px;
+        height: 44px;
+    }
+
+    .upload-title {
+        font-size: 14px;
+    }
+
+    .upload-sub {
+        font-size: 12px;
+    }
+
+    .canvas-viewport {
+        min-height: 300px;
+        max-height: 480px;
+        padding: 12px;
+    }
+
+    .canvas-toolbar {
+        padding: 6px 8px;
+        gap: 4px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .canvas-toolbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .canvas-toolbar .btn {
+        height: 28px;
+        padding: 0 8px;
+        font-size: 11px;
+        flex-shrink: 0;
+    }
+
+    .canvas-toolbar .divider {
+        margin: 0 2px;
+        flex-shrink: 0;
+    }
+
+    .canvas-toolbar .zoom-label {
+        font-size: 11px;
+        min-width: 38px;
+        flex-shrink: 0;
+    }
+
+    .canvas-hint {
+        font-size: 11px;
+        padding: 0 10px;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .control-section {
+        padding: 14px;
+    }
+
+    .control-label {
+        font-size: 10.5px;
+        margin-bottom: 10px;
+    }
+
+    .preset-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+
+    .preset-btn {
+        padding: 8px 6px;
+        font-size: 11px;
+    }
+
+    .stat-row {
+        padding: 8px 0;
+        font-size: 12.5px;
+    }
+
+    .stat-value {
+        font-size: 12px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 10px;
+    }
+
+    .pose-item {
+        padding: 6px;
+    }
+
+    .pose-item .pose-thumb {
+        height: 76px;
+    }
+
+    .pose-name {
+        font-size: 10.5px;
+    }
+
+    .pose-size {
+        font-size: 9.5px;
+    }
+
+    .shortcuts {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+
+    .shortcut {
+        padding: 5px 7px;
+        font-size: 11px;
+    }
+
+    .shortcut-key {
+        font-size: 10px;
+        padding: 1px 5px;
+    }
+
+    footer {
+        padding: 32px 16px 24px;
+        font-size: 11.5px;
+    }
+
+    .toast-stack {
+        bottom: 16px;
+        right: 16px;
+        left: 16px;
+    }
+
+    .toast {
+        max-width: none;
+        font-size: 12.5px;
+        padding: 10px 14px;
+    }
+}
+
+/* ============================================================
+   Small phones
+   ============================================================ */
+@media (max-width: 480px) {
+    .page {
+        padding: 12px;
+    }
+
+    .header-inner {
+        padding: 0 12px;
+        height: 52px;
+    }
+
+    .brand-mark {
+        width: 26px;
+        height: 26px;
+    }
+
+    .brand-mark svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    .brand-name {
+        font-size: 13px;
+    }
+
+    .header-actions {
+        gap: 4px;
+    }
+
+    .header-actions .btn {
+        height: 30px;
+        padding: 0 8px;
+    }
+
+    .hero-title {
+        font-size: 20px;
+    }
+
+    .hero-sub {
+        font-size: 12.5px;
+    }
+
+    .card {
+        border-radius: 12px;
+    }
+
+    .upload-zone {
+        padding: 40px 16px;
+    }
+
+    .canvas-viewport {
+        min-height: 260px;
+        max-height: 400px;
+        padding: 10px;
+    }
+
+    .preset-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .preset-btn {
+        padding: 7px 4px;
+        font-size: 10.5px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+        gap: 8px;
+    }
+
+    .pose-item .pose-thumb {
+        height: 66px;
+    }
+
+    .shortcuts {
+        grid-template-columns: 1fr 1fr;
+    }
 }
